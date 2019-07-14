@@ -1,0 +1,29 @@
+{
+	"manifest_version": 2,
+
+	"name": "Reddit Hide Votes",
+	"description": "This extension hides the number of votes and voting buttons for posts and comments",
+	"version": "0.0.1.0",
+
+	"web_accessible_resources": [
+		"js/domscript.js"
+	],
+
+	"browser_action": {
+	    "default_icon": "icon.png"
+	},
+
+	"background": {
+		"scripts": ["background.js"]
+	},
+
+	"externally_connectable": {
+	  "matches": ["https://*.reddit.com/*"]
+	},
+
+	"permissions": [
+		"tabs",
+		"activeTab",
+		"https://*.reddit.com/*"
+	]
+}
